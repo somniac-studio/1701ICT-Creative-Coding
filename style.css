@@ -1,0 +1,111 @@
+*{
+  overflow: hidden;
+}
+
+   body {
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    }
+
+    .p5Canvas{
+      display: flex;
+      align-self: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+    }
+
+    .hoverbox{
+      display: flex;
+      border-radius: 25px;
+      position: absolute;
+      bottom: 5%;
+      margin-left: 5%;
+      margin-right: 5%;
+      text-align: center;
+      flex-wrap: wrap;
+      background-color: rgba(253, 215, 58, 0.8);
+      padding-left: 25px; padding-right: 25px;
+      padding-top: 10px; padding-bottom: 10px;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+     
+    }
+
+    .hoverbox h2{
+      margin-top: 0;
+      padding-right: 30px;
+      padding-bottom: 1px; 
+      margin-bottom: 0px;
+    }
+
+    .hoverbox h2,.hoverbox p{
+      /*-webkit-text-stroke: 0.5px black;*/
+      color: white;
+      padding-top: 0px;
+      text-shadow:
+      -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    }
+
+    /* Style the navigation menu */
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: hidden;
+}
+
+/* Navigation links */
+.navbar a {
+  float: left;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+}
+
+/* Add a background color on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Style the current/active link */
+.navbar a.active {
+  background-color: #04AA6D;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*.w3-sidebar{
+      height:100%;
+      width:200px;
+      background-color:#fff;
+      position:fixed!important;
+      z-index:1;
+      overflow:auto
+    }
+
+      .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{
+        color:#000!important;
+        background-color:#f1f1f1!important
+    }
+
+    .w3-bar-block .w3-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
+    .w3-bar-block .w3-center .w3-bar-item{text-align:center}
+    .w3-bar .w3-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}*/
