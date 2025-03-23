@@ -14,30 +14,52 @@ It is acceptable to “hard code” the largest value as a variable alongside yo
 To clarify; the global variables should be:
 */
 
-let comedy = 6;
-let action = 8;
-let romance = 3;
-let drama = 5;
-let scifi = 4;
+let data = {
+    "comedy" : 6,
+    "action" : 8,
+    "romance" : 3,
+    "drama" : 5,
+    "scifi" : 4
+}
 
-let largest = 8;
+let barWidth;
+let maxValue;
 
 function setup() {
     createCanvas(1000, 1000);
     
     angleMode(DEGREES);
-    noCursor();
+    //noCursor();
     frameRate(60);
     colorMode(RGB, 255);
 
     describe(
-      ''
+      'Creates a bar chart by taking in variables, calculating the highest amount, and amount of variables and then draws the chart based on that!'
     );
     
   }
 
 
 function draw() {
-    
+    background(69);
+    //DrawBarChar();
   }
   
+
+function CalcBarWidth(){
+    // takes the amount of items in data, counts them, ands add extra for spacing!
+    barWidth = width / (Object.keys(data).length + 1);
+}
+
+function CalcMaxValue(){
+    MaxValue = 0;
+        for (let key in data) {
+            if (data[key] > MaxValue) {
+                MaxValue = data[key];
+        }        
+    }
+}
+
+function DrawBarChart(){
+    let x = barWidth / 2;
+}
