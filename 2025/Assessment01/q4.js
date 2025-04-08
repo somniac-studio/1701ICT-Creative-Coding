@@ -25,6 +25,7 @@ let angles = [0, 0, 0];
 let moonAngle = 0;
 let stars = [];
 
+//setup the canvas, set the fps to 60, and hide that nasty cursor from covering my work haha
 function setup() {
     createCanvas(1000, 1000);
     frameRate(60);
@@ -32,15 +33,15 @@ function setup() {
     noStroke();
     noCursor();
 
-    // Create stars
+    // Create stars using random math based on canvas height / width. 
   for (let i = 0; i < 200; i++) {
     stars.push({
       x: random(width),
       y: random(height),
       size: random(1, 3),
       brightness: random(100, 255),
-      twinkleSpeed: random(0.01, 0.05),
-      twinkleOffset: random(TWO_PI),
+      twinkleSpeed: random(0.01, 0.05), //adds a lil twinkle, so the brightness will change slightly for fun
+      twinkleOffset: random(TWO_PI), 
     });
   }
 }
@@ -48,7 +49,7 @@ function setup() {
 function draw() {
     background(0); // Black background
 
-    // Draw twinkling stars
+    // Draw twinkling stars, just wanted to spruce up the whole thing, I had an hour extra before this was due and made the dumb decision to do this for whatever reason.
     for (let star of stars) {
         let twinkle = map(sin(frameCount * star.twinkleSpeed + star.twinkleOffset), -1, 1, 0.7, 1);
         fill(255, 255, 255, star.brightness * twinkle);
@@ -56,9 +57,9 @@ function draw() {
     }
 
 
-     // Draw the Sun with a gradient
+     // Draw the Sun with a gradient (I learnt specifically how to draw a gradient on a shape just for this)
     let sunSize = 100;
-    let sunCenterX = width / 2;
+    let sunCenterX = width / 2; //lazilly centers the sun
     let sunCenterY = height / 2;
     for (let r = sunSize; r > 0; r--) {
         let brightness = map(r, 0, sunSize, 255, 150); // Adjust brightness for gradient
@@ -67,13 +68,13 @@ function draw() {
     }
 
     // Planet distances and sizes
-    let distances = [150, 250, 350];
-    let sizes = [20, 40, 60];
+    let distances = [150, 250, 350]; // set distances of each planet, from the sun.
+    let sizes = [20, 40, 60]; // set sizes for each planet
 
     // Planet speeds
-    let speeds = [0.03, 0.01, 0.02];
+    let speeds = [0.03, 0.01, 0.02]; //set the speeds of each planet
 
-    // Planet colours
+    // Planet colours, make em pretty, I wanted to be as efficient as possible for using let so much.
     let planetColours = [
         [171,181,74],    // Planet 1
         [231,125,17],    // planet 2
